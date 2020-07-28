@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+.mat-tab-body-content{
+  overflow: hidden !important;
+}
+.mat-tab-group.mat-primary .mat-ink-bar{
+  background-color: #005bac !important;
+}
+@media screen and (max-width:768px){
+.mat-expansion-panel-header{
+    height: 150px !important;
+  }
+mat-panel-title{
+  margin-right: 0px !important;
+}
+}

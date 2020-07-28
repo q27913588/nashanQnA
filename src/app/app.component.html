@@ -1,0 +1,85 @@
+<nav class="navbar navbar-light ">
+  <span class="navbar-brand">
+    <img class="nav-img ml-5 mt-3" src="./assets/img/ns-logo@2x.png">
+  </span>
+  <hr class="nav-hr">
+</nav>
+<section class="container-fluid">
+  <div class="banner"></div>
+</section>
+<section>
+  <mat-tab-group mat-align-tabs="center" animationDuration="0ms"
+  (selectedIndexChange)="tabChange($event)"
+  >
+    <mat-tab *ngFor="let item of category;" >
+      <ng-template mat-tab-label>
+        <img width="50px" height="100%"  src={{item.img}} class="px-2">
+        {{item.title}}
+      </ng-template>
+    </mat-tab>
+  </mat-tab-group>
+      <!--QA-->
+      <div class="container">
+        <!--搜尋Bar-->
+        <div class="ml-3 row" style="text-align: center;">
+        <!-- <mat-form-field class="pt-4" style="width: 200px;">
+          <mat-label>關鍵字</mat-label>
+          <input matInput placeholder="請輸入關鍵字">
+        </mat-form-field> -->
+        <!--TAG-->
+        <div class="search-checkbox w-100 text-center pt-4 row">
+          <mat-checkbox class="my-1 col-md-2 col-4" *ngFor="let type of typeList ; let i = index;"
+          (change)="checkChange($event,i)"
+          [(ngModel)]="type.check"
+          >{{type.title}}</mat-checkbox>
+        </div>
+      </div>
+ <!--搜尋Bar-->
+        <mat-accordion class="pb-3 px-3">
+          <div class="m-3 text-center search-checkbox" style="background-color: #efefef;"
+          *ngIf="selectQuestionList.length == 0" >
+            <p class="p-4">很抱歉，目前無查詢資料</p>
+          </div>
+          <mat-expansion-panel
+          class="m-3"
+           *ngFor="let question of selectQuestionList;"
+           (opened)="question.isOpen = true"
+            (closed)="question.isOpen = false" hideToggle>
+            <mat-expansion-panel-header [ngClass]="{'q-selected':question.isOpen}">
+              <mat-panel-title class="text-center col-sm-12">
+                <!--title-->
+                <div class="row w-100">
+
+                  <span class="q-font col-sm-12 col-md-1">Q{{question.No}}</span>
+                  <!--tag-->
+                  <!--body-->
+                  <span class="q-title col-sm-12 col-md-8">{{question.question}}</span>
+                  <p class="q-date mb-0 col-md-2 col-sm-12">
+                    上架日期:{{question.date}}
+                  </p>
+                </div>
+                <img width="20px" height="20px" style="margin-top: 4px;" src={{panelStatus(question.isOpen)}}>
+              </mat-panel-title>
+
+            </mat-expansion-panel-header>
+            <div>
+              <p class="p-3 a-font">{{ question.answer }}</p>
+            </div>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </div>
+      <!--QA-->
+
+</section>
+<div style="height: 100px;"></div>
+<div class="footer-blue">
+  <div class="container" style="text-align: center;">
+      <div class="row">
+          <p class="py-3 col-12">總公司地址：台北市中正區忠孝西路一段6號18樓 電話：(02)2316-1188 客戶服務專線：0800-020-060 E-mail
+              address：info@nsgeneral.com.tw</p>
+      </div>
+  </div>
+
+</div>
+
+<router-outlet></router-outlet>

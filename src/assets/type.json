@@ -1,0 +1,26 @@
+[
+  {
+    "title": "商品",
+    "check": false
+  },
+  {
+    "title": "報價",
+    "check": false
+  },
+  {
+    "title": "投保",
+    "check": false
+  },
+  {
+    "title": "批改",
+    "check": false
+  },
+  {
+    "title": "查詢",
+    "check": false
+  },
+  {
+    "title": "理賠",
+    "check": false
+  }
+]

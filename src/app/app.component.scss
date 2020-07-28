@@ -1,0 +1,109 @@
+body{
+  font-family:'微軟正黑體';
+}
+mat-tab-body-content{
+  overflow: hidden;
+}
+.nav-hr{
+  height: 5px;
+  width: 100%;
+  background-color: #005bac;
+}
+.nav-img{
+  width: 181px;
+}
+.banner{
+  background-image: url("/assets/img/FAQ_banner@3x.png"); /* The image used */
+  background-position: left; /* Center the image */
+  height: 251px;
+  background-repeat: no-repeat; /* Do not repeat the image */
+   background-size: cover; /* Resize the background image to cover the entire container */
+   @media screen and (max-width:768px){
+    background-image: url("/assets/img/mobileBanner.png");
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size:cover ; /* Resize the background image to cover the entire container */
+    background-position: center; /* Center the image */
+    height: 200px;
+   }
+}
+.q-selected{
+  background-color: #005bac !important;
+  span{
+    color: white !important;
+  }
+  .q-date{
+    color: white;
+  }
+
+}
+.q-font {
+  font-family: SFProDisplay;
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.21;
+  letter-spacing: 1.2px;
+  text-align: left;
+  color: #005bac;
+}
+.q-title{
+    font-family: SFProDisplay;
+    font-size: 16px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+    letter-spacing: 0.8px;
+    text-align: left;
+    color: #005bac;
+    padding-left: 12px;
+    padding-top: 5px;
+
+}
+.q-date{
+
+    font-family: SFProDisplay;
+    font-size: 12px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.17;
+    letter-spacing: 0.6px;
+    text-align: right;
+    color: #777777;
+    padding-top: 7px;
+    margin-right: 10px;
+}
+.a-font{
+  font-family: SFProDisplay;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: 0.7px;
+  text-align: left;
+  color: #555555;
+  white-space: pre-line;
+}
+.search-checkbox{
+  font-family: SFProDisplay;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.19;
+  letter-spacing: 0.8px;
+  text-align: left;
+  color: #005bac;
+  p{
+    text-align: center;
+  }
+}
+.footer-blue{
+  color: white;
+  background-color: #005bac;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
