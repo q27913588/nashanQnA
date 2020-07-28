@@ -1,0 +1,28 @@
+[
+  {
+    "title": "汽機車保險",
+    "img": "assets/img/car@3x.png"
+  },
+  {
+    "title": "旅遊保險",
+    "img": "assets/img/travel@3x.png"
+  },
+  {
+    "title": "住宅火險",
+    "img": "assets/img/house@3x.png"
+  },
+  {
+    "title": "企業保險",
+    "img": "assets/img/company@3x.png"
+  }
+  ,
+  {
+    "title": "電子保單",
+    "img": "assets/img/company@3x.png"
+  }
+  ,
+  {
+    "title": "其他",
+    "img": "assets/img/company@3x.png"
+  }
+]
