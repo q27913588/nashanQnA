@@ -35,11 +35,12 @@
         </div>
       </div>
  <!--搜尋Bar-->
-        <mat-accordion class="pb-3 px-3">
-          <div class="m-3 text-center search-checkbox" style="background-color: #efefef;"
-          *ngIf="selectQuestionList.length == 0" >
+        <mat-accordion >
+          <!-- <div class="m-3 text-center search-checkbox" style="background-color: #efefef;"
+          [hidden]="selectQuestionList.length != 0"  >
             <p class="p-4">很抱歉，目前無查詢資料</p>
-          </div>
+          </div> -->
+          
           <mat-expansion-panel
           class="m-3"
            *ngFor="let question of selectQuestionList;"
@@ -55,7 +56,7 @@
                   <!--body-->
                   <span class="q-title col-sm-12 col-md-8">{{question.question}}</span>
                   <p class="q-date mb-0 col-md-2 col-sm-12">
-                    上架日期:{{question.date}}
+                    更新日期:{{question.date}}
                   </p>
                 </div>
                 <img width="20px" height="20px" style="margin-top: 4px;" src={{panelStatus(question.isOpen)}}>
@@ -75,7 +76,7 @@
 <div class="footer-blue">
   <div class="container" style="text-align: center;">
       <div class="row">
-          <p class="py-3 col-12">總公司地址：台北市中正區忠孝西路一段6號18樓 電話：(02)2316-1188 客戶服務專線：0800-020-060 E-mail
+          <p class="py-3 col-12">總公司地址：台北市中正區忠孝西路一段6號19樓 電話：(02)2316-1188 客戶服務專線：0800-020-060 E-mail
               address：info@nsgeneral.com.tw</p>
       </div>
   </div>

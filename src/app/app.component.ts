@@ -55,17 +55,17 @@ export class AppComponent implements OnInit {
     if (this.questionList !== undefined){
       this.selectQuestionList = this.questionList.filter(x => x.category === this.activeCategory);
     }
-    this.typeList.forEach(function (value: Type, key: number){
+    this.typeList.forEach((value: Type, key: number) => {
       value.check = false;
     });
   }
-  checkChange(e: any,i: number): void{
+  checkChange(e: any, i: number): void{
     this.typeList[i].check = e.checked;
     this.initSelectData();
     this.selectQuestionTypeList = [];
     this.selectQuestionList = this.questionList.filter(x => x.category === this.activeCategory);
     let tag = false;
-    this.typeList.forEach(function (value: Type, key: number){
+    this.typeList.forEach((value: Type, key: number) => {
       if (value.check === true){
         this.selectQuestionTypeList = this.selectQuestionTypeList.concat(
         this.selectQuestionList.filter(x => x.type === value.title));

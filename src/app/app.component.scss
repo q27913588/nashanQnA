@@ -13,13 +13,13 @@ mat-tab-body-content{
   width: 181px;
 }
 .banner{
-  background-image: url("/assets/img/FAQ_banner@3x.png"); /* The image used */
+  background-image: url("../assets/img/FAQ_banner@3x.png"); /* The image used */
   background-position: left; /* Center the image */
   height: 251px;
   background-repeat: no-repeat; /* Do not repeat the image */
    background-size: cover; /* Resize the background image to cover the entire container */
    @media screen and (max-width:768px){
-    background-image: url("/assets/img/mobileBanner.png");
+    background-image: url("../assets/img/mobileBanner.png");
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size:cover ; /* Resize the background image to cover the entire container */
     background-position: center; /* Center the image */
@@ -83,7 +83,10 @@ mat-tab-body-content{
   letter-spacing: 0.7px;
   text-align: left;
   color: #555555;
-  white-space: pre-line;
+  // white-space: pre-line;
+  word-wrap: break-word;      /* IE 5.5-7 */
+  white-space: -moz-pre-wrap; /* Firefox 1.0-2.0 */
+  white-space: pre-wrap;      /* Modern browsers */
 }
 .search-checkbox{
   font-family: SFProDisplay;
