@@ -8,4 +8,5 @@ export class Question {
   date: string;
   open: string;
   isOpen: boolean;
+  url: string;
 }

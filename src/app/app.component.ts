@@ -84,5 +84,15 @@ export class AppComponent implements OnInit {
       return 'assets/img/fold@3x.png';
     }
   }
-
+  urlString(no: string): string {
+    if(no === "10"){
+      return "強制險電子式保險證下載"
+    }
+    if(no === "48"){
+      return "延誤保險即時理賠"
+    }
+    if(no === "78"){
+      return "台灣網路認證股份有限公司"
+    }
+  }
 }

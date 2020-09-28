@@ -65,6 +65,7 @@
             </mat-expansion-panel-header>
             <div>
               <p class="p-3 a-font">{{ question.answer }}</p>
+              <a *ngIf="question.url" class="pl-3" style="color:#005bac;font-weight: 500;"  href="{{ question.url }}" target="_blank">{{urlString(question.No)}}</a>
             </div>
           </mat-expansion-panel>
         </mat-accordion>
